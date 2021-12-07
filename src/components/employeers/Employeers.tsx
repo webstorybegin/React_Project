@@ -1,27 +1,20 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
+import { EmployeersItem } from '../EmployeersItem/EmployeersItem';
 
-import { EmployeersItem } from "../employeersItem/EmployeersItem"
-
-import './Employeers.module.scss';
-
+import "./Employeers.css";
 interface IEmployeersProps {
-  data: [],
-  salary: any
+  data: any[],
 }
 
 export const Employeers: FC<IEmployeersProps> = ({data}) => {
 
-  const elements = data.map(item => {    
-    return (
-      <EmployeersItem name={item.name} salary={item.salary} />
-    )
+  const elements = data.map((item, index) => {
+    return <EmployeersItem key={index} {...item} />
   })
 
   return (
     <div className="employeers">
-      <ul className="app-list list-group">
-        {elements}
-      </ul>
+      <ul className="app-list list-group">{elements}</ul>
     </div>
-  )
-} 
+  );
+}
