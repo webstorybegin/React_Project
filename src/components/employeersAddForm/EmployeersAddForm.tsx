@@ -3,7 +3,7 @@ import { Component } from 'react';
 import './EmployeersAddForm.css';
 
 interface Props {
-  target: any
+  target?: any
 }
 
 interface State {

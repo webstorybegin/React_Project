@@ -4,7 +4,8 @@ import './EmployeersItem.css';
 
 interface Props {
   name: string,
-  salary: number
+  salary: number,
+  onDelete: () => void,
 }
 
 interface State {
@@ -34,7 +35,7 @@ export class EmployeersItem extends Component<Props, State> {
   }
 
   render() {
-    const { name, salary } = this.props;
+    const { name, salary, onDelete } = this.props;
     const { increase, like } = this.state;
 
     let classNames = "list-group-item d-flex justify-content-between";
@@ -63,7 +64,11 @@ export class EmployeersItem extends Component<Props, State> {
             <i className="fas fa-cookie"></i>
           </button>
 
-          <button type="button" className="btn-trash btn-sm">
+          <button 
+            type="button" 
+            className="btn-trash btn-sm"
+            onClick={onDelete}
+          >
             <i className="fas fa-trash"></i>
           </button>
           <i className="fas fa-star"></i>
