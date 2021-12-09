@@ -44,7 +44,7 @@ class App extends Component {
         data: newArr,
       };
     });
-  };
+  }; 
 
   onToggleProp = (id, prop) => {
     /////// Option 1
