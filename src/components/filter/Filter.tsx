@@ -6,7 +6,7 @@ export const Filter = () => {
   return (
     <div className={styles.btnGroup}>
       <button className="btn btn-light" type="button">
-        All employeers
+        All employees
       </button>
       <button className="btn btn-light" type="button">
         Upward

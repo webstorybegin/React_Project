@@ -1,27 +1,38 @@
 import { Component } from 'react';
 
-import './EmployeersAddForm.css';
+import './EmployeesAddForm.css';
 
 interface Props {
   target?: any
+  onAdd?: any
 }
 
 interface State {
   name: string,
-  salary: number,
+  salary: any,
 }
 
-export class EmployeersAddForm extends Component<Props, State> {
+export class EmployeesAddForm extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      name: "",
-      salary: 0,
+      name: '',
+      salary: '',
     };
   }
 
   onValueChange = (e: Props) => {
     return this.setState({...this.state, [e.target.name] : e.target.value})
+  }
+
+  onSubmit = (e) => {
+   e.preventDefault();
+   if(this.state.name.length === 0 || !this.state.salary) return;
+   this.props.onAdd(this.state.name, this.state.salary);
+   this.setState({
+     name: '',
+     salary: '',
+   })
   }
 
   render() {
@@ -30,7 +41,11 @@ export class EmployeersAddForm extends Component<Props, State> {
     return (
       <div className="app-add-form">
         <h3 className="titleForm">Add a new employee</h3>
-        <form className="add-form d-flex">
+        <form 
+          className="add-form d-flex"
+          onSubmit={this.onSubmit}  
+        >
+          
           <input
             type="text"
             className="form-control new-post-label"
