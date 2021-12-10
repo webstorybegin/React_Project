@@ -41,11 +41,7 @@ export class EmployeesAddForm extends Component<Props, State> {
     return (
       <div className="app-add-form">
         <h3 className="titleForm">Add a new employee</h3>
-        <form 
-          className="add-form d-flex"
-          onSubmit={this.onSubmit}  
-        >
-          
+        <form className="add-form d-flex" onSubmit={this.onSubmit}>
           <input
             type="text"
             className="form-control new-post-label"

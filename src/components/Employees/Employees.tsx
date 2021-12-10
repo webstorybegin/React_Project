@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { EmployeesItem } from "../EmployeesItem/EmployeesItem";
+
 
 import "./Employees.css";
+import { EmployeesItem } from './EmployeesItem/EmployeesItem';
 
 interface IemployeesProps {
   data: any[];
@@ -27,7 +28,9 @@ export const Employees: FC<IemployeesProps> = ({
         key={id}
         {...itemProps}
         onDelete={() => onDelete(id)}
-        onToggleProp={(e) => onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))}
+        onToggleProp={(e) =>
+          onToggleProp(id, e.currentTarget.getAttribute("data-toggle"))
+        }
       />
     );
   });
