@@ -1,7 +1,7 @@
 import { Component } from "react";
 
-import { Employees } from "../employees/Employees";
-import { EmployeesAddForm } from "../employees/employeesAddForm/EmployeesAddForm";
+import { Employees } from "../Employees/Employees";
+import { EmployeesAddForm } from "../Employees/EmployeesAddForm/EmployeesAddForm";
 import { Filter } from "../filter/Filter";
 import { Info } from "../info/Info";
 import { Search } from "../search/Search";
