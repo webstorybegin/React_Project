@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { EmployeesItem } from './EmployeesItem/EmployeesItem';
+import { EmployeesItem } from './employeesItem/EmployeesItem';
 
 import "./Employees.scss";
 interface IemployeesProps {
