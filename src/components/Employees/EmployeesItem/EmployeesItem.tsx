@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import "./EmployeesItem.css";
+import "./EmployeesItem.scss";
 
 interface Props {
   name: string;
