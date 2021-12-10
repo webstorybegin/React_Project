@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import './EmployeesAddForm.css';
+import "./EmployeesAddForm.scss";
 
 interface Props {
   target?: any

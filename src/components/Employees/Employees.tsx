@@ -1,9 +1,7 @@
 import { FC } from "react";
-
-
-import "./Employees.css";
 import { EmployeesItem } from './EmployeesItem/EmployeesItem';
 
+import "./Employees.scss";
 interface IemployeesProps {
   data: any[];
   onDelete: any;
