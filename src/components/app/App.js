@@ -1,10 +1,10 @@
 import { Component } from "react";
 
-import { Employees } from "../Employees/Employees";
-import { EmployeesAddForm } from "../Employees/EmployeesAddForm/EmployeesAddForm";
-import { Filter } from "../Filter/Filter";
-import { Info } from "../Info/Info";
-import { Search } from "../Search/Search";
+import { Employees } from "../employees/Employees";
+import { EmployeesAddForm } from "../employees/employeesAddForm/EmployeesAddForm";
+import { Filter } from "../filter/Filter";
+import { Info } from "../info/Info";
+import { Search } from "../search/Search";
 
 import styles from "./App.module.scss";
 
@@ -57,7 +57,7 @@ class App extends Component {
           id: 6,
         },
       ],
-      term: '',
+      term: "",
       filter: "all",
     };
     this.newId = 7;
@@ -139,10 +139,7 @@ class App extends Component {
 
         <div className={styles.search}>
           <Search updSearch={this.updSearch} />
-          <Filter 
-            filter={filter} 
-            onSelectFilter={this.onSelectFilter} 
-          />
+          <Filter filter={filter} onSelectFilter={this.onSelectFilter} />
         </div>
 
         <Employees
